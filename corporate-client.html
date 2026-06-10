@@ -69,6 +69,7 @@
             padding-bottom: 20px;
             border-bottom: 1px solid var(--glass-border);
         }
+        .sidebar-close { display: none; }
         .sidebar-close i, .sidebar-close svg { pointer-events: none; }
         .sidebar-logo img {
             height: 38px;
@@ -651,9 +652,12 @@
                 z-index: 10000;
                 transition: left 0.28s ease;
                 box-shadow: 20px 0 60px rgba(0,0,0,0.7);
+                overflow-y: auto;
+                -webkit-overflow-scrolling: touch;
             }
             .sidebar.active { left: 0; }
             .sidebar-toggle-btn { display: flex; align-items: center; gap: 6px; }
+            .sidebar-close { display: flex; align-items: center; justify-content: center; }
             .main-content { padding: 24px 18px; }
             .mid-row { grid-template-columns: 1fr; }
             .bottom-grid { grid-template-columns: 1fr; }
@@ -949,23 +953,23 @@
                 <div class="card-title" style="cursor:pointer;" onclick="showSection('threats')" title="View Threat Incidents">Threat Activity <span>Last 7 days &nbsp;<span style="color:var(--primary);font-size:0.7rem;">→</span></span></div>
                 <div class="chart-wrap">
                     <div class="bar-group">
-                        <div class="bar-track"><div class="bar-fill red" style="height: 45%;"></div></div>
+                        <div class="bar-track"><div class="bar-fill red" style="height: 78%;"></div></div>
                         <div class="bar-label">Mon</div>
                     </div>
                     <div class="bar-group">
-                        <div class="bar-track"><div class="bar-fill red" style="height: 30%;"></div></div>
+                        <div class="bar-track"><div class="bar-fill red" style="height: 52%;"></div></div>
                         <div class="bar-label">Tue</div>
                     </div>
                     <div class="bar-group">
-                        <div class="bar-track"><div class="bar-fill orange" style="height: 65%;"></div></div>
+                        <div class="bar-track"><div class="bar-fill orange" style="height: 85%;"></div></div>
                         <div class="bar-label">Wed</div>
                     </div>
                     <div class="bar-group">
-                        <div class="bar-track"><div class="bar-fill red" style="height: 25%;"></div></div>
+                        <div class="bar-track"><div class="bar-fill red" style="height: 42%;"></div></div>
                         <div class="bar-label">Thu</div>
                     </div>
                     <div class="bar-group">
-                        <div class="bar-track"><div class="bar-fill orange" style="height: 55%;"></div></div>
+                        <div class="bar-track"><div class="bar-fill orange" style="height: 68%;"></div></div>
                         <div class="bar-label">Fri</div>
                     </div>
                     <div class="bar-group">
@@ -973,7 +977,7 @@
                         <div class="bar-label">Sat</div>
                     </div>
                     <div class="bar-group">
-                        <div class="bar-track"><div class="bar-fill red" style="height: 20%;"></div></div>
+                        <div class="bar-track"><div class="bar-fill red" style="height: 28%;"></div></div>
                         <div class="bar-label">Sun</div>
                     </div>
                 </div>
